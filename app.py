@@ -7,8 +7,10 @@ import io
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  # Loads from .env
-openai.api_key = os.getenv("OPENAI_API_KEY")
+load_dotenv()
+
+openai.api_key = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")  # Loads from .env
+
 
 
 # Setup
