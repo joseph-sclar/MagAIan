@@ -1,4 +1,5 @@
 import streamlit as st
+import openai
 from openai import OpenAI
 from PIL import Image
 import base64
@@ -7,7 +8,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()  # Loads from .env
-OpenAI.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 # Setup
