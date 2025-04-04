@@ -9,7 +9,9 @@ import os
 
 load_dotenv()
 
-openai.api_key = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")  # Loads from .env
+openai.api_key = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
+st.write("API key loaded?", bool(openai.api_key))
+  # Loads from .env
 
 
 
