@@ -54,7 +54,7 @@ if uploaded_file:
 
     # OpenAI API
     with st.spinner("🧠 Thinking... just a sec!"):
-        client = OpenAI(api_key=st.secrets["openai_api_key"])
+        client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
         response = client.chat.completions.create(
             model="gpt-4o",
