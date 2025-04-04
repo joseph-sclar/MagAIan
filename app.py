@@ -3,6 +3,12 @@ from openai import OpenAI
 from PIL import Image
 import base64
 import io
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Loads from .env
+OpenAI.api_key = os.getenv("OPENAI_API_KEY")
+
 
 # Setup
 st.set_page_config(page_title="MagAIan", page_icon="🗺️", layout="centered")
