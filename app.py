@@ -7,6 +7,9 @@ import io
 from dotenv import load_dotenv
 import os
 
+# Setup
+st.set_page_config(page_title="MagAIan", page_icon="🗺️", layout="centered")
+
 load_dotenv()
 
 openai.api_key = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
@@ -15,8 +18,7 @@ st.write("API key loaded?", bool(openai.api_key))
 
 
 
-# Setup
-st.set_page_config(page_title="MagAIan", page_icon="🗺️", layout="centered")
+
 
 # Styles
 st.markdown("""
